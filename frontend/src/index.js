@@ -27,4 +27,28 @@ root.render(
   </React.StrictMode>
 );
 
+// import Img1 from "../../assets/car-1.jpeg"
+// import Img2 from "../../assets/car-2.jpeg"
+// import Img3 from "../../assets/car-3.jpeg"
+// import Img4 from "../../assets/car-4.jpeg"
+// import Img5 from "../../assets/car-5.jpeg"
 
+// const MainCarousel = () => {
+
+//   const photos = [
+//       {
+//           src: Img1
+//       },
+//       {
+//           src: Img2
+//       },
+//       {
+//           src: Img3
+//       },
+//       {
+//           src: Img4
+//       },
+//       {
+//           src: Img5
+//       },
+//   ];

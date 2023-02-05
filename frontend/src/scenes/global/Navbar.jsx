@@ -15,7 +15,11 @@ function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
+  const isCartOpen = useSelector((state) => state.cart.isCartOpen);
 
+
+  console.log(isCartOpen)
+  console.log(cart)
   return (
     <Box
       display="flex"
@@ -39,7 +43,8 @@ function Navbar() {
         <Box
           onClick={() => navigate("/")}
           sx={{ "&:hover": { cursor: "pointer" } }}
-          color={shades.secondary[500]}
+          color="chocolate"
+          fontWeight="bolder"
         >
           BasiratStores
         </Box>
