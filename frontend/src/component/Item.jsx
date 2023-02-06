@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { IconButton, Box, Typography, useTheme, Button } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { shades } from "../theme";
-import { addToCart } from "../state";
+import { addToCart } from "../redux/CartSlice";
 import { useNavigate } from "react-router-dom";
 
 const Item = ({ item, width }) => {
   const navigate = useNavigate();
+  const cart = useSelector(state=> state.cart.cart)
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
@@ -27,6 +28,8 @@ const Item = ({ item, width }) => {
     },
   } = image;
 
+  console.log(cart)
+
   return (
     <Box width={width}>
       <Box
@@ -38,7 +41,7 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="300px"
           height="400px"
-          src={`http://localhost:2000${url}`}
+          src={`http://localhost:1337${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />
@@ -66,9 +69,13 @@ const Item = ({ item, width }) => {
               </IconButton>
             </Box>
             <Button
-              onClick={() => {
-                dispatch(addToCart({ item: { ...item, count } }));
-              }}
+              onClick={() => dispatch(addToCart({
+                id: item.id,
+                name: item.attributes.name,
+                price: item.attributes.price,
+                image: item.attributes.image.data.attributes.formats.medium.url,
+                count: count
+              }))}
               sx={{ backgroundColor: shades.primary[300], color: "white" }}
             >
               Add to Cart

@@ -3,13 +3,11 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import { shades } from "../../theme";
-import Img1 from "../../assets/car-1.jpeg"
-import Img2 from "../../assets/car-2.jpeg"
-import Img3 from "../../assets/car-3.jpeg"
-import Img4 from "../../assets/car-4.jpeg"
-import Img5 from "../../assets/car-5.jpeg"
-import Img6 from "../../assets/car-12.jpg"
+import Img2 from "../../assets/child1.jpg"
+import Img3 from "../../assets/child2.jpg"
+import Img4 from "../../assets/child3.jpeg"
+import Img5 from "../../assets/child4.jpg"
+import Img6 from "../../assets/child5.jpg"
 
 
 
@@ -35,7 +33,6 @@ const MainCarousel = () => {
 
     const isNonMobile = useMediaQuery("(min-width:600px)");
 
-
     return (
         <Carousel
             autoPlay={true}
@@ -51,10 +48,10 @@ const MainCarousel = () => {
                         backgroundColor: "chocolate",
                         position: "absolute",
                         top: "45%",
-                        left: "10px",
+                        left: "7px",
                         color: "beige",
                         "&:hover": { color: "chocolate", backgroundColor: "beige" },
-                        padding: "5px",
+                        padding: "3px",
                         zIndex: "10",
                     }}
                 >
@@ -68,10 +65,10 @@ const MainCarousel = () => {
                         backgroundColor: "chocolate",
                         position: "absolute",
                         top: "45%",
-                        right: "10px",
+                        right: "7px",
                         color: "beige",
                         "&:hover": { color: "chocolate", backgroundColor: "beige" },
-                        padding: "5px",
+                        padding: "3px",
                         zIndex: "10",
                     }}
                 >
@@ -95,7 +92,7 @@ const MainCarousel = () => {
                         <Box
                             color="white"
                             padding={isNonMobile ? "20px" : "10px 20px"}
-                            borderRadius="1px"
+                            borderRadius="3px"
                             textAlign="left"
                             backgroundColor="rgb(0, 0, 0, 0.4)"
                             position="absolute"
@@ -103,7 +100,7 @@ const MainCarousel = () => {
                             left={isNonMobile ? "10%" : "0"}
                             right={isNonMobile ? undefined : "0"}
                             margin={isNonMobile ? undefined : "0 auto"}
-                            maxWidth={isNonMobile ? undefined : "350px"}
+                            maxWidth={isNonMobile ? undefined : "280px"}
                         >
                             <Typography lineHeight="1.3" variant={isNonMobile ? "h2" : "h3"}>Home for latest,  affordable <br></br> children clothings</Typography>
                             <Typography
