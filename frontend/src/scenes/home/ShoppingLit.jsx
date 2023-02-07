@@ -70,7 +70,6 @@ const ShoppingList = () => {
         <Tab label="TOP RATED" value="topRated" />
       </Tabs>
       <Box
-      border="1px solid red"
         margin="0 auto"
         display="grid"
         gridTemplateColumns="repeat(auto-fill, 300px)"

@@ -14,6 +14,7 @@ import {
   setIsCartOpen,
 } from "../../redux/CartSlice";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const FlexBox = styled(Box)`
   display: flex;
@@ -32,6 +33,22 @@ const CartMenu = () => {
     return total + item.count * item.price;
   }, 0);
 
+
+  const checkoutOpt = () => {
+    if (cart.length <= 0){
+      alert("you cannot proceed to checkout with an empty cart")
+      return
+    }
+    navigate("/checkout")
+    dispatch(setIsCartOpen({}));
+  }
+
+  // useEffect(()=> {
+  //   console.log(cart.length);
+  //   console.log("hello");
+
+  // })
+
   return (
     <Box
       display={isCartOpen ? "block" : "none"}
@@ -43,7 +60,7 @@ const CartMenu = () => {
       left="0"
       top="0"
       overflow="auto">
-      
+
       <Box
         position="fixed"
         right="0"
@@ -125,6 +142,12 @@ const CartMenu = () => {
                 </Box>
 
                 <Divider />
+                <Box>
+                  {
+                    cart.length === 0 &&
+                    <Typography fontWeight="bold">cart is empty, go hopping!</Typography>
+                  }
+                </Box>
               </Box>
             ))}
           </Box>
@@ -145,8 +168,9 @@ const CartMenu = () => {
                 m: "20px 0",
               }}
               onClick={() => {
-                navigate("/checkout");
-                dispatch(setIsCartOpen({}));
+                checkoutOpt()
+                // navigate("/checkout");
+                // dispatch(setIsCartOpen({}));
               }}
             >
               CHECKOUT

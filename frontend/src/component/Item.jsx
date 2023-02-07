@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const Item = ({ item, width }) => {
   const navigate = useNavigate();
-  const cart = useSelector(state=> state.cart.cart)
+  const cart = useSelector(state => state.cart.cart)
   const dispatch = useDispatch();
   const [count, setCount] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
@@ -34,8 +34,8 @@ const Item = ({ item, width }) => {
     <Box width={width}>
       <Box
         position="relative"
-        onMouseOver={() => setIsHovered(true)}
-        onMouseOut={() => setIsHovered(false)}
+      // onMouseOver={() => setIsHovered(true)}
+      // onMouseOut={() => setIsHovered(false)}
       >
         <img
           alt={item.name}
@@ -46,7 +46,9 @@ const Item = ({ item, width }) => {
           style={{ cursor: "pointer" }}
         />
         <Box
-          display={isHovered ? "block" : "none"}
+          // display={isHovered ? "block" : "none"}
+          display="block"
+
           position="absolute"
           bottom="10%"
           left="0"
