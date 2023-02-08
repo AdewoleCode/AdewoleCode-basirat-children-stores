@@ -28,7 +28,7 @@ const CartMenu = () => {
   const cart = useSelector((state) => state.cart.cart);
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
 
-  console.log(cart)
+  // console.log(cart)
   const totalPrice = cart.reduce((total, item) => {
     return total + item.count * item.price;
   }, 0);
@@ -151,12 +151,12 @@ const CartMenu = () => {
               </Box>
             ))}
           </Box>
-
+s
           {/* ACTIONS */}
           <Box m="20px 0">
             <FlexBox m="20px 0">
               <Typography fontWeight="bold">SUBTOTAL</Typography>
-              <Typography fontWeight="bold">${totalPrice}</Typography>
+              <Typography fontWeight="bold">₦{totalPrice.toFixed(2)}</Typography>
             </FlexBox>
             <Button
               sx={{

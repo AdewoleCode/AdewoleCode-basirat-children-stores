@@ -63,14 +63,14 @@ const ItemDetails = () => {
         </Box>
 
         {/* ACTIONS */}
-        <Box flex="1 1 50%" mb="40px" border="1px solid red">
+        <Box flex="1 1 50%" mb="40px">
 
 
           <Box m="65px 0 25px 0">
-            <Typography variant="h3">{item?.attributes?.name}</Typography>
-            <Typography>${item?.attributes?.price}</Typography>
+            <Typography m="10px 0" variant="h3">{item?.attributes?.name}</Typography>
+            <Typography>₦{item?.attributes?.price}</Typography>
             <Typography sx={{ mt: "20px" }}>
-              {item?.attributes?.longDescription}
+              {item?.attributes?.shortDsecription}
             </Typography>
           </Box>
 
@@ -109,7 +109,7 @@ const ItemDetails = () => {
               ADD TO CART
             </Button>
           </Box>
-          <Box>
+          <Box  m="20px 0 5px">
             {/* <Box m="20px 0 5px 0" display="flex">
               <FavoriteBorderOutlinedIcon />
               <Typography sx={{ ml: "5px" }}>ADD TO WISHLIST</Typography>

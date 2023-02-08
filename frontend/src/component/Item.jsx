@@ -43,7 +43,7 @@ const Item = ({ item, width }) => {
           height="400px"
           src={`http://localhost:1337${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", objectFit:"cover" }}
         />
         <Box
           // display={isHovered ? "block" : "none"}
@@ -93,7 +93,7 @@ const Item = ({ item, width }) => {
             .replace(/^./, (str) => str.toUpperCase())}
         </Typography>
         <Typography>{name}</Typography>
-        <Typography fontWeight="bold">${price}</Typography>
+        <Typography fontWeight="bold">₦{price}</Typography>
       </Box>
     </Box>
   );

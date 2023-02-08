@@ -18,8 +18,8 @@ function Navbar() {
   const isCartOpen = useSelector((state) => state.cart.isCartOpen);
 
 
-  console.log(isCartOpen)
-  console.log(cart)
+  // console.log(isCartOpen)
+  // console.log(cart)
   return (
     <Box
       display="flex"
@@ -46,7 +46,7 @@ function Navbar() {
           color="chocolate"
           fontWeight="bolder"
         >
-          BasiratStores
+          MummyIbroStores
         </Box>
         <Box
           display="flex"

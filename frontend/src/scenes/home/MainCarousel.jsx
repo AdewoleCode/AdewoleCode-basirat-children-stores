@@ -3,11 +3,15 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import Img2 from "../../assets/child1.jpg"
-import Img3 from "../../assets/child2.jpg"
-import Img4 from "../../assets/child3.jpeg"
-import Img5 from "../../assets/child4.jpg"
-import Img6 from "../../assets/child5.jpg"
+import Img2 from "../../assets/pic1.jpg"
+import Img3 from "../../assets/pic2.jpg"
+import Img4 from "../../assets/pic3.jpg"
+import Img5 from "../../assets/pic4.jpg"
+import Img6 from "../../assets/pic5.jpg"
+import Img1 from "../../assets/pic6.jpg"
+import Img7 from "../../assets/pic7.jpg"
+// import Img8 from "../../assets/pic8.jpg"
+
 
 
 
@@ -15,7 +19,7 @@ const MainCarousel = () => {
 
     const photos = [
         {
-            src: Img6
+            src: Img1
         },
         {
             src: Img2
@@ -29,6 +33,15 @@ const MainCarousel = () => {
         {
             src: Img5
         },
+        {
+            src: Img6
+        },
+        {
+            src: Img7
+        },
+        // {
+        //     src: Img8
+        // },
     ];
 
     const isNonMobile = useMediaQuery("(min-width:600px)");
